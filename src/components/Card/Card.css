@@ -1,0 +1,19 @@
+.Card {
+  background: #fff;
+  border-radius: 7px;
+  height: 240px;
+  margin-top: 10px;
+  position: relative;
+  width: 32%;
+  box-shadow: 2px 5px 12px -4px rgb(110, 110, 110);
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+
+.Card:hover {
+  transform: scale(.98);
+  cursor: pointer;
+  transition: .5s ease-in-out; 
+  filter: blur(1px)
+}
