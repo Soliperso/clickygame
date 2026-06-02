@@ -1,0 +1,96 @@
+.board-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 420px) {
+  .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Start screen ---------- */
+.board-start {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.start-hint {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+}
+
+.start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--accent-grad);
+  box-shadow: 0 10px 30px -8px var(--accent);
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.countdown-icon {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.countdown-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--track);
+  overflow: hidden;
+}
+
+.countdown-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent-grad);
+  transition: width 0.05s linear;
+}
+
+.countdown-num {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  min-width: 38px;
+  text-align: right;
+}
+
+.countdown-icon.low,
+.countdown-num.low {
+  color: #ef4444;
+}
+
+.countdown-fill.low {
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+}

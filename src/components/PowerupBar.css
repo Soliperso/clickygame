@@ -1,0 +1,59 @@
+.powerups {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.powerup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.powerup:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.powerup:not(:disabled):hover {
+  background: var(--glass-bg-strong);
+}
+
+.powerup-icon {
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.powerup-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--accent-grad);
+}
+
+@media (max-width: 460px) {
+  .powerup-label {
+    display: none;
+  }
+}
